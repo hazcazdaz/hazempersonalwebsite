@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import React from "react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navItems = [
   { href: "#projects", label: "Projects" },
@@ -41,6 +42,7 @@ const Hero: React.FC = () => {
           ))}
         </ul>
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Button asChild variant="ghost" size="sm" aria-label="Email">
             <a href="mailto:hazemhhasalem@gmail.com" title="Email Hazem">
               <Mail />
@@ -62,6 +64,7 @@ const Hero: React.FC = () => {
             </a>
           </Button>
         </div>
+
       </nav>
 
       <div className="container grid gap-6 py-16 md:py-24 lg:grid-cols-12 lg:items-center">
