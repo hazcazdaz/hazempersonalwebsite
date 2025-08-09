@@ -50,7 +50,9 @@ const Experience: React.FC = () => {
       <header className="mb-8">
         <h2 className="text-3xl font-semibold tracking-tight">Experience</h2>
         <p className="mt-2 text-muted-foreground">Recent roles and impact.</p>
+        <p className="mt-1 text-sm text-muted-foreground">Hover over the experience to see what I did!</p>
       </header>
+
       <div className="relative mx-auto max-w-3xl">
         <div className="absolute left-4 top-0 bottom-0 w-px bg-border/60 md:left-1/2" aria-hidden="true" />
         <ul className="space-y-8">
