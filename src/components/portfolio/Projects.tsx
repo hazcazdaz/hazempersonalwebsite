@@ -69,7 +69,9 @@ const Projects: React.FC = () => {
         <p className="mt-2 text-muted-foreground">
           Selected work highlighting real-time systems, backend performance, and polished UX.
         </p>
+        <p className="mt-1 text-sm text-muted-foreground">Hover and Click the Tab you want to see!</p>
       </header>
+
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => {
           const card = (
