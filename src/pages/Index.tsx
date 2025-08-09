@@ -4,6 +4,7 @@ import Experience from "@/components/portfolio/Experience";
 import Education from "@/components/portfolio/Education";
 import About from "@/components/portfolio/About";
 import Skills from "@/components/portfolio/Skills";
+import Resume from "@/components/portfolio/Resume";
 import Contact from "@/components/portfolio/Contact";
 import { Helmet } from "react-helmet-async";
 
@@ -48,6 +49,7 @@ const Index = () => {
         <Experience />
         <Education />
         <Skills />
+        <Resume />
         <Contact />
       </main>
       <footer className="container py-8 text-center text-sm text-muted-foreground">
