@@ -34,10 +34,10 @@ const Index = () => {
     <>
       <Helmet>
         <title>Hazem Salem | Software Engineer</title>
-        <meta name="description" content="Portfolio of Hazem Salem — backend-focused software engineer building fast, reliable systems and real-time apps." />
+        <meta name="description" content="Portfolio of Hazem Salem — Full-stack software engineer building fast, reliable systems and real-time apps." />
         <link rel="canonical" href={canonical} />
         <meta property="og:title" content="Hazem Salem | Software Engineer" />
-        <meta property="og:description" content="Backend-focused software engineer crafting reliable systems and real-time apps." />
+        <meta property="og:description" content="Full-stack software engineer crafting reliable systems and real-time apps." />
         <script type="application/ld+json">{JSON.stringify(ld)}</script>
       </Helmet>
 
