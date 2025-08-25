@@ -54,9 +54,9 @@ const projects = [
       "Designed robust real-time mechanics and team processes",
     ],
     links: [
-      { label: "Kazuhiko Academy", url: "https://www.roblox.com/games/14168494606/MDM-Kazuhiko-Academy" },
-      { label: "60 Seconds", url: "https://www.roblox.com/games/14113363085/MB-60-Seconds" },
-      { label: "Village of Rire", url: "https://www.roblox.com/games/14062983214/MB-Village-of-Rire" },
+      { label: "Kazuhiko Academy", url: "https://www.roblox.com/games/7132600758/EO-DR-Kazuhiko-Academy" },
+      { label: "60 Seconds", url: "https://www.roblox.com/games/7148955739/EO-60-Seconds" },
+      { label: "Village of Rire", url: "https://www.roblox.com/games/7251767466/EO-Village-of-Rire" },
     ],
   },
 ];
