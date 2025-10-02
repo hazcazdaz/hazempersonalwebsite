@@ -1,62 +1,47 @@
-import Hero from "@/components/portfolio/Hero";
-import Projects from "@/components/portfolio/Projects";
-import Experience from "@/components/portfolio/Experience";
-import Education from "@/components/portfolio/Education";
-import About from "@/components/portfolio/About";
-import Skills from "@/components/portfolio/Skills";
-import Resume from "@/components/portfolio/Resume";
-import Contact from "@/components/portfolio/Contact";
-import { Helmet } from "react-helmet-async";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-const Index = () => {
-  const canonical = typeof window !== 'undefined' ? `${window.location.origin}${window.location.pathname}` : "/";
-  const ld = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Hazem Salem",
-    email: "mailto:hazemhhasalem@gmail.com",
-    telephone: "+1-832-812-4643",
-    url: canonical,
-    jobTitle: "Software Engineer",
-    address: { "@type": "PostalAddress", addressLocality: "Katy", addressRegion: "TX", addressCountry: "US" },
-    sameAs: [
-      "https://www.linkedin.com/in/hhasalem",
-      "https://github.com/hazcazdaz"
-    ],
-    alumniOf: {
-      "@type": "CollegeOrUniversity",
-      name: "Texas A&M University",
-      address: { "@type": "PostalAddress", addressLocality: "College Station", addressRegion: "TX" }
-    }
-  };
+const Resume = () => {
+  const DOC_ID = "13sFCamptJgzP4SkD2DKKtmx2UgtP7gbX";
+  const viewUrl = `https://docs.google.com/document/d/${DOC_ID}/edit?usp=sharing`;
+  const previewUrl = `https://docs.google.com/document/d/${DOC_ID}/preview`;
+  const downloadUrl = `https://docs.google.com/document/d/${DOC_ID}/export?format=pdf`;
 
   return (
-    <>
-      <Helmet>
-        <title>Hazem Salem | Software Engineer</title>
-        <meta name="description" content="Portfolio of Hazem Salem — Full-stack software engineer building fast, reliable systems and real-time apps." />
-        <link rel="canonical" href={canonical} />
-        <meta property="og:title" content="Hazem Salem | Software Engineer" />
-        <meta property="og:description" content="Full-stack software engineer crafting reliable systems and real-time apps." />
-        <script type="application/ld+json">{JSON.stringify(ld)}</script>
-      </Helmet>
+    <section id="resume" className="container py-16 md:py-24">
+      <header className="mb-6 md:mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Resume</h2>
+        <p className="mt-2 text-muted-foreground">View or download my latest resume. For opportunities, feel free to reach out via the contact section.</p>
+      </header>
 
-      <a id="top" />
-      <Hero />
-      <main>
-        <About />
-        <Projects />
-        <Experience />
-        <Education />
-        <Skills />
-        <Resume />
-        <Contact />
-      </main>
-      <footer className="container py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Hazem Salem · Built with React & Tailwind
-      </footer>
-    </>
+      <div className="flex items-center gap-3 mb-6">
+        <Button asChild size="lg">
+          <a href={viewUrl} target="_blank" rel="noopener" aria-label="Open resume on Google Drive in a new tab">
+            View/Download PDF
+          </a>
+        </Button>
+        <Button asChild variant="secondary" size="lg">
+          <a href="#contact" aria-label="Jump to contact section">Contact me</a>
+        </Button>
+      </div>
+
+      <Card>
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg">Inline Preview</CardTitle>
+        </CardHeader>
+        <CardContent>
+          {/* Embedded Google Drive preview */}
+          <iframe
+            src={previewUrl}
+            className="w-full h-[70vh] rounded-md border"
+            allow="autoplay"
+            title="Resume preview"
+          />
+          <p className="sr-only">If the preview does not load, use the View/Download button above.</p>
+        </CardContent>
+      </Card>
+    </section>
   );
 };
 
-export default Index;
+export default Resume;
