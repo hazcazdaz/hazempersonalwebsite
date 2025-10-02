@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const Resume = () => {
-  const DRIVE_FILE_ID = "1sdXcgjy8If1s0t_mxy0PDMs4rxu1cUeT";
-  const viewUrl = `https://drive.google.com/file/d/${DRIVE_FILE_ID}/view`;
-  const previewUrl = `https://drive.google.com/file/d/${DRIVE_FILE_ID}/preview`;
-  const downloadUrl = `https://drive.google.com/uc?export=download&id=${DRIVE_FILE_ID}`;
+  const DOC_ID = "13sFCamptJgzP4SkD2DKKtmx2UgtP7gbX";
+  const viewUrl = `https://docs.google.com/document/d/${DOC_ID}/edit?usp=sharing`;
+  const previewUrl = `https://docs.google.com/document/d/${DOC_ID}/preview`;
+  const downloadUrl = `https://docs.google.com/document/d/${DOC_ID}/export?format=pdf`;
 
   return (
     <section id="resume" className="container py-16 md:py-24">
