@@ -1,14 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import React from "react";
+import aggieseekImage from "@/assets/project-aggieseek.png";
+import bobashopImage from "@/assets/project-bobashop.png";
+import kazuhikoImage from "@/assets/project-kazuhiko.png";
 
 const projects = [
   {
     id: "aggieseek",
     title: "AggieSeek",
-    period: "Apr 2025 – May 2025",
+    period: "Apr 2025 – Aug 2025",
     stack: ["AWS", "Discord", "Twilio", "Tailwind CSS", "Next.js", "React Native"],
     url: "https://aggieseek.net/",
+    image: aggieseekImage,
     description:
       "Cross‑platform app that streamlines course registration tracking for 500+ students with real-time alerts.",
     bullets: [
@@ -22,6 +26,7 @@ const projects = [
     period: "Feb 2025 – May 2025",
     stack: ["Java", "PostgreSQL", "React", "Node.js", "APIs"],
     url: "https://github.com/hazcazdaz/BobashopPOSSystem",
+    image: bobashopImage,
     description:
       "Full‑stack POS with real-time order tracking, collaboration tools, and accessibility-first UI.",
     bullets: [
@@ -47,6 +52,7 @@ const projects = [
     title: "Roblox Multiplayer Games",
     period: "Jul 2021 – Dec 2022",
     stack: ["LUA", "Roblox Studio", "Jira", "Discord"],
+    image: kazuhikoImage,
     description:
       "Led programming for a real-time multiplayer game amassing 450,000 visits and 5,000+ active users.",
     bullets: [
@@ -54,9 +60,9 @@ const projects = [
       "Designed robust real-time mechanics and team processes",
     ],
     links: [
-      { label: "Kazuhiko Academy", url: "https://www.roblox.com/games/7132600758/EO-DR-Kazuhiko-Academy" },
-      { label: "60 Seconds", url: "https://www.roblox.com/games/7148955739/EO-60-Seconds" },
-      { label: "Village of Rire", url: "https://www.roblox.com/games/7251767466/EO-Village-of-Rire" },
+      { label: "Kazuhiko Academy", url: "https://www.roblox.com/games/14168494606/MDM-Kazuhiko-Academy" },
+      { label: "60 Seconds", url: "https://www.roblox.com/games/14113363085/MB-60-Seconds" },
+      { label: "Village of Rire", url: "https://www.roblox.com/games/14062983214/MB-Village-of-Rire" },
     ],
   },
 ];
@@ -75,7 +81,16 @@ const Projects: React.FC = () => {
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p) => {
           const card = (
-            <Card className="transition-transform hover:-translate-y-1">
+            <Card className="transition-transform hover:-translate-y-1 overflow-hidden">
+              {"image" in p && p.image ? (
+                <div className="relative h-48 w-full overflow-hidden">
+                  <img 
+                    src={p.image} 
+                    alt={`${p.title} screenshot`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ) : null}
               <CardHeader>
                 <CardTitle className="flex items-center justify-between">
                   <span>{p.title}</span>
