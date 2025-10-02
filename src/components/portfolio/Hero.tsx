@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import React from "react";
 import ThemeToggle from "@/components/ThemeToggle";
+import profileImage from "@/assets/profile-professional.jpg";
 
 const navItems = [
   { href: "#projects", label: "Projects" },
@@ -73,7 +74,7 @@ const Hero: React.FC = () => {
             Hazem Salem — Software Engineer
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
-            Backend-focused engineer crafting fast, reliable systems. I build
+            Software engineer crafting fast, reliable systems. I build
             real-time apps, refactor schemas, and ship resilient pipelines with
             crisp UX.
           </p>
@@ -86,7 +87,14 @@ const Hero: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="lg:col-span-5">
+        <div className="lg:col-span-5 flex flex-col gap-6">
+          <div className="flex justify-center">
+            <img 
+              src={profileImage} 
+              alt="Hazem Salem professional headshot" 
+              className="w-48 h-48 rounded-full object-cover border-4 border-border shadow-lg"
+            />
+          </div>
           <div className="rounded-xl border bg-card/60 p-6 shadow-sm backdrop-blur">
             <dl className="grid grid-cols-2 gap-6 text-sm">
               <div>
