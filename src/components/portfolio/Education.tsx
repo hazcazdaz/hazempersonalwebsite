@@ -24,7 +24,7 @@ const Education: React.FC = () => {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Cumulative GPA</p>
-              <p>3.788</p>
+              <p>3.752</p>
             </div>
             <div>
               <p className="text-sm text-muted-foreground">Graduation</p>
