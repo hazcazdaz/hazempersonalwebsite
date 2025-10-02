@@ -5,7 +5,7 @@ const experiences = [
   {
     role: "Backend Engineer Intern",
     org: "Aggie Nexus",
-    period: "Apr 2025 – May 2025 | Remote",
+    period: "Apr 2025 – Aug 2025 | Remote",
     bullets: [
       "Cut API response times 50% by adopting Next.js and eliminating type errors",
       "Improved PostgreSQL queries by 40% via schema refactors and advanced indexes",
