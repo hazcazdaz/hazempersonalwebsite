@@ -171,7 +171,7 @@ const Stack: React.FC = () => {
           <React.Fragment key={s.name}>
             <div
               ref={(el) => (tileRefs.current[i] = el)}
-              className="absolute left-0 top-0 flex items-center justify-center rounded-2xl bg-ink shadow-sm will-change-transform"
+              className="absolute left-0 top-0 flex items-center justify-center rounded-2xl border border-rule bg-white shadow-sm will-change-transform dark:border-transparent dark:bg-ink"
               style={{ width: TILE, height: TILE, opacity: 0 }}
               title={s.name}
             >
@@ -183,11 +183,11 @@ const Stack: React.FC = () => {
                   draggable={false}
                   onError={(e) => {
                     const img = e.target as HTMLImageElement;
-                    img.outerHTML = `<span class="font-serif italic text-2xl text-paper">${s.name[0]}</span>`;
+                    img.outerHTML = `<span class="font-serif italic text-2xl text-ink dark:text-paper">${s.name[0]}</span>`;
                   }}
                 />
               ) : (
-                <span className="font-serif text-2xl italic text-paper">{s.name[0]}</span>
+                <span className="font-serif text-2xl italic text-ink dark:text-paper">{s.name[0]}</span>
               )}
             </div>
             <div
