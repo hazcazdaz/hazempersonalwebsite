@@ -50,8 +50,24 @@ export const projects: Project[] = [
   },
   {
     num: "02",
+    title: "A.M.P.S.",
+    period: "Jan 2026 – May 2026",
+    role: "Software Design Lead · 6-person team",
+    stack: ["React", "FastAPI", "Python", "PostgreSQL", "Supabase", "ESP32", "Machine Learning"],
+    description:
+      "Adaptive Management Power System: a full-stack IoT smart power strip that fingerprints connected appliances with machine learning and cuts standby 'vampire' power automatically.",
+    image: "/images/project-amps.png",
+    bullets: [
+      "Engineered a full-stack IoT system with ESP32 sensing hardware, FastAPI, and PostgreSQL for per-outlet monitoring and control",
+      "Built an ML pipeline classifying appliances by their electrical behavior, targeting 85%+ accuracy for automatic standby cutoff",
+      "Designed and built the React dashboard: sub-second telemetry, per-outlet relay controls, scheduling, and energy analytics",
+    ],
+    links: [{ label: "GitHub", url: "https://github.com/Nkasten11/AMPS" }],
+  },
+  {
+    num: "03",
     title: "AggieSeek",
-    period: "Apr 2025 – Apr 2026",
+    period: "Apr 2025 – Present",
     role: "Backend & Notifications · 5-person team",
     stack: ["AWS Lambda", "AWS RDS", "Next.js", "React Native", "Twilio", "Discord API"],
     description:
@@ -65,7 +81,7 @@ export const projects: Project[] = [
     links: [{ label: "aggieseek.net", url: "https://aggieseek.net/" }],
   },
   {
-    num: "03",
+    num: "04",
     title: "Bobashop POS",
     period: "Feb 2025 – May 2025",
     role: "Fullstack",
@@ -81,7 +97,7 @@ export const projects: Project[] = [
     links: [{ label: "GitHub", url: "https://github.com/hazcazdaz/BobashopPOSSystem" }],
   },
   {
-    num: "04",
+    num: "05",
     title: "Roblox Multiplayer Games",
     period: "Jul 2021 – Dec 2022",
     role: "Lead Programmer",

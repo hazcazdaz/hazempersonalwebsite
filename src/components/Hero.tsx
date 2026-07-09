@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         className="mx-auto mb-6 h-24 w-24 rounded-full border-2 border-rule object-cover shadow-sm"
       />
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
-        Hazem Salem · {profile.location}
+        Hazem Salem
       </p>
 
       <h1 className="mt-8 text-6xl font-bold leading-[1.02] tracking-tight sm:text-7xl md:text-8xl">
@@ -51,6 +51,12 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-xs">
+        <a href={`mailto:${profile.email}`} className="underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent">
+          {profile.email}
+        </a>
+        <a href="tel:+18328124643" className="underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent">
+          {profile.phone}
+        </a>
         <a href={profile.github} target="_blank" rel="noreferrer" className="underline decoration-rule underline-offset-4 transition-colors hover:text-accent hover:decoration-accent">
           GitHub
         </a>
