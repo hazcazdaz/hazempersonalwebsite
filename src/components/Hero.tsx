@@ -11,6 +11,11 @@ const Hero: React.FC = () => {
 
   return (
     <header id="top" className="mx-auto max-w-5xl px-5 pb-20 pt-20 text-center md:pb-28 md:pt-28">
+      <img
+        src="/images/profile-professional.jpg"
+        alt="Hazem Salem"
+        className="mx-auto mb-6 h-24 w-24 rounded-full border-2 border-rule object-cover shadow-sm"
+      />
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
         Hazem Salem · {profile.location}
       </p>
